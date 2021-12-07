@@ -1,0 +1,10 @@
+new_tab django
+cd ~/Documents/private-proto/
+title django
+launch zsh -c 'nvim'
+launch zsh 
+layout horizontal
+
+new_tab docker
+launch zsh
+
