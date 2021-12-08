@@ -1,0 +1,2 @@
+"Color
+colorscheme nord
