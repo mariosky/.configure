@@ -1,6 +1,6 @@
 # dotfiles
 
-# Alacritty 
+### Alacritty 
 Copy folder alacritty to ~.\config
 ```
 cp -r alacritty/ ~/.config/
