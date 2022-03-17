@@ -5,5 +5,4 @@ Copy folder alacritty to ~.\config
 ```
 cp -r alacritty/ ~/.config/
 ```
-Check that the selected font is installed in your system
-
+Make shure the [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono) font is installed in your system. 
