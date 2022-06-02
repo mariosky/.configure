@@ -1,5 +1,5 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "File Tree
 Plug 'preservim/nerdtree'
 Plug 'nvim-telescope/telescope.nvim'
@@ -32,7 +32,7 @@ Plug 'lervag/vimtex'
 
 "C#
 Plug 'OmniSharp/omnisharp-vim'
-
+Plug 'dart-lang/dart-vim-plugin'
 "Auto {}
 Plug 'jiangmiao/auto-pairs'  " https://github.com/jiangmiao/auto-pairs
 Plug 'tpope/vim-surround' " https://github.com/tpope/vim-surround 
@@ -44,7 +44,7 @@ Plug 'machakann/vim-highlightedyank'
 
 "Internal Tools
 Plug 'nvim-lua/plenary.nvim' " Async programming in Lua for Neovim
-
+Plug 'nvim-lua/popup.nvim'
 "Terminal
 Plug 'kassio/neoterm'
 Plug 'liuchengxu/vim-which-key'

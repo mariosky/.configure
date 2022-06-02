@@ -74,7 +74,9 @@ font:
     # family: Iosevka
     # style: Light
     # family: "Fira Code"
-    family: "Ubuntu Mono"
+    # family: "Ubuntu Mono"
+    # family: "Source Code Pro" 
+    family: "MesloLGS NF" 
     # style: Retina
 
   # The bold font face
@@ -82,17 +84,19 @@ font:
     # family: Iosevka
     # style: Medium
     # family: "Fira Code"
-    family: "Ubuntu Mono"
-
+    # family: "Ubuntu Mono"
+    # family: "Source Code Pro" 
+    family: "MesloLGS NF" 
   # The italic font face
   italic:
     # family: Iosevka
     # style: "Light Italic"
     # style: "Light Oblique"
     # family: "Fira Code"
-    family: "Ubuntu Mono"
+    # family: "Ubuntu Mono"
     # style: "Medium Italic"
-
+    # family: "Source Code Pro" 
+    family: "MesloLGS NF" 
   # Point size of the font
   size: 16.0
 
@@ -517,9 +521,9 @@ schemes:
 # *solarized-dark
 # *tomorrow-night
 # *tokyo-night
-colors: *monokai-pro
+#colors: *monokai-pro
 
-#colors: *dracula
+colors: *dracula
 
 # Visual Bell
 #
@@ -550,7 +554,7 @@ bell:
 
 # Background opacity
 # background_opacity: 1.0
-window.opacity: 1.0 
+window.opacity: 0.8 
 # Key bindings
 #
 # Key bindings are specified as a list of objects. Each binding will specify a
