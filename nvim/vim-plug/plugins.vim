@@ -23,8 +23,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Better syntax-highlighting for filetypes in vim
 Plug 'sheerun/vim-polyglot'
 
-" UltiSnips for snippets
-" Plug 'sirver/ultisnips'
+" Comment stuff out 
+Plug 'tpope/vim-commentary'
 
 "LaTeX
 Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
