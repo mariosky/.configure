@@ -7,7 +7,7 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 let g:which_key_map =  {}
 
 " SINGLE MAPPINGS
-let g:which_key_map['d'] = [ ':bd!'                  , 'delete buffer']
+let g:which_key_map['D'] = [ ':bd!'                  , 'delete buffer']
 let g:which_key_map['q'] = [ ':wqa!'                  , 'quit' ]
 let g:which_key_map['w'] = [ ':w'                    , 'write' ]
 let g:which_key_map['r'] = [ ':source $MYVIMRC'      , 'reload config' ]
