@@ -17,10 +17,11 @@ lua <<EOF
 require'nvim-tree'.setup {
   }
 
+require("nvim-lsp-installer").setup {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
-local servers = { 'pylsp' }
-
+local servers = {'pylsp'}
+-- npm install -g @tailwindcss/language-server 
 local on_attach = function()
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
@@ -28,6 +29,7 @@ local on_attach = function()
       vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0})
       vim.keymap.set("n", "df", vim.diagnostic.goto_next, {buffer=0})
       vim.keymap.set("n", "ren", vim.lsp.buf.rename, {buffer=0})
+--      vim.keymap.set('n', '<Space> a', vim.lsp.buf.code_action, bufopts)
     end 
 
 for _,lsp in pairs(servers) do
@@ -42,7 +44,12 @@ end
     on_attach = on_attach,
     cmd = { "/Users/mario/.local/share/nvim/lsp_servers/omnisharp/omnisharp/OmniSharp", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) }
   }
-
+-- HTML 
+  require'lspconfig'['html'].setup{
+    capabilities = capabilities, 
+    on_attach = on_attach,
+    filetypes = {"html", "htmldjango"}
+  }
 vim.opt.completeopt={"menu", "menuone", "noselect"}
 -- Setup nvim-cmp.
 local cmp = require'cmp'
@@ -105,7 +112,8 @@ source $HOME/.config/nvim/themes/airline.vim
 " let g:deoplete#enable_at_startup = 1
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+let ayucolor="light"
+syntax enable 
 
-
-
+colorscheme tender 
 

@@ -6,9 +6,14 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
+"Git Help 
+Plug 'tpope/vim-fugitive'
 "Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"indent lines 
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Themes 
 Plug 'morhetz/gruvbox'
@@ -16,9 +21,9 @@ Plug 'rakr/vim-one'
 Plug 'arcticicestudio/nord-vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'joshdick/onedark.vim'
-
-
-
+Plug 'ayu-theme/ayu-vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'jacoborus/tender.vim'
 " Auto complete
 "
 Plug 'hrsh7th/nvim-cmp'
@@ -38,7 +43,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
-
+Plug 'mattn/emmet-vim'
 " Better syntax-highlighting for filetypes in vim
 Plug 'sheerun/vim-polyglot'
 

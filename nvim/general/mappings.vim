@@ -16,9 +16,9 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
 
-"inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "Telescope Mappings 
 " Find files using Telescope command-line sugar.

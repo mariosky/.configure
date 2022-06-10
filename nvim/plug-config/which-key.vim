@@ -12,7 +12,7 @@ let g:which_key_map['q'] = [ ':wqa!'                  , 'quit' ]
 let g:which_key_map['w'] = [ ':w'                    , 'write' ]
 let g:which_key_map['r'] = [ ':source $MYVIMRC'      , 'reload config' ]
 let g:which_key_map['c'] = [ ':VimtexCountWords!'    , 'count' ]
-
+let g:which_key_map['a'] = [ 'vim.lsp.buf.code_action' , 'code action' ]
 
 " l is for LaTeX
 let g:which_key_map.L = {
