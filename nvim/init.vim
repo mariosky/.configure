@@ -17,10 +17,19 @@ lua <<EOF
 require'nvim-tree'.setup {
   }
 
+require("trouble").setup {
+  }
+
+local opts = { noremap=true, silent=true }
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+
 require("nvim-lsp-installer").setup {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
-local servers = {'pylsp'}
+local servers = {'pylsp','emmet_ls'}
 -- npm install -g @tailwindcss/language-server 
 local on_attach = function()
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
@@ -30,6 +39,11 @@ local on_attach = function()
       vim.keymap.set("n", "df", vim.diagnostic.goto_next, {buffer=0})
       vim.keymap.set("n", "ren", vim.lsp.buf.rename, {buffer=0})
 --      vim.keymap.set('n', '<Space> a', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
     end 
 
 for _,lsp in pairs(servers) do
