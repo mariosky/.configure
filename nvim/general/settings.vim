@@ -16,13 +16,13 @@ set hidden
 set nowrap
 set incsearch
 set number
-set scrolloff=8
+set scrolloff=4
 set colorcolumn=80
 set signcolumn=yes
 "set foldmethod=indent
 set autoindent
 set fileformat=unix
-set timeoutlen=500
+set timeoutlen=800
 set mouse=a " Mouse support for moving arround 
 
 let g:gruvbox_guisp_fallback = "bg"

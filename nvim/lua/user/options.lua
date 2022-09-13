@@ -10,7 +10,7 @@ set.cursorline = true
 set.clipboard = "unnamedplus"
 set.backup = false                          -- creates a backup file
 set.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
-set.cmdheight = 2                           -- more space in the neovim command line for displaying messages
+set.cmdheight = 1                           -- more space in the neovim command line for displaying messages
 set.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 set.conceallevel = 0                        -- so that `` is visible in markdown files
 set.fileencoding = "utf-8"                  -- the encoding written to a file
@@ -35,7 +35,7 @@ set.shiftwidth = 2                          -- the number of spaces inserted for
 set.tabstop = 2                             -- insert 2 spaces for a tab
 set.cursorline = true                       -- highlight the current line
 set.number = true                           -- set numbered lines
-set.relativenumber = false                  -- set relative numbered lines
+set.relativenumber = true                  -- set relative numbered lines
 set.numberwidth = 4                         -- set number column width to 2 {default 4}
 set.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 set.wrap = false                            -- display lines as one long line
@@ -47,5 +47,12 @@ set.shortmess:append "c"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+
+
+
+
+
+
+
 
 print("more lua")
