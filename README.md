@@ -11,9 +11,16 @@ Archivos de configuración personales y otras tareas de instalación para nuevas
 - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
 ### Instalar el editor Neo Vim
-[neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-Despues instalar [vim-plug](https://github.com/junegunn/vim-plug)
-
+1. Instalar [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+2. Despues el gestor de plugins [vim-plug](https://github.com/junegunn/vim-plug). Abrimos nvim y ejecutamos :PlugInstall 
+3. Instalar [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+4. Instalar [sharkdp/fd](https://github.com/sharkdp/fd)
+5. Para LSP instalar node y nvm
+6. Opcional instalamos el Python provider:
+```
+python3 -m pip install pynvim --user 
+```
+7. Ejecutamos nvim y revisamos la salud con `:checkhealth` 
 ### Terminal
 
 #### Alacritty 
