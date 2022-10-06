@@ -19,6 +19,8 @@ Archivos de configuración personales y otras tareas de instalación para nuevas
 6. Opcional instalamos el Python provider:
 ```
 python3 -m pip install pynvim --user 
+
+pip install python-lsp-server
 ```
 7. Ejecutamos nvim y revisamos la salud con `:checkhealth` 
 ### Terminal
