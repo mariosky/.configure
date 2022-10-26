@@ -29,7 +29,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 require("nvim-lsp-installer").setup {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
-local servers = {'pylsp','emmet_ls'}
+local servers = {'pylsp','emmet_ls', 'texlab'}
 -- npm install -g @tailwindcss/language-server 
 local on_attach = function()
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
