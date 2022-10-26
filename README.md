@@ -23,6 +23,9 @@ python3 -m pip install pynvim --user
 pip install python-lsp-server
 ```
 7. Ejecutamos nvim y revisamos la salud con `:checkhealth` 
+
+### LSP
+Instalar el TexLab (https://github.com/latex-lsp/texlab) **macos:** `brew install texlab`
 ### Terminal
 
 #### Alacritty 
