@@ -51,6 +51,7 @@ Corre nvim checkhealth revisa el folder de inicio
 
 Copia a este folder nvim  ejemplo:
 ```
+[System.Environment]::SetEnvironmentVariable('CONFIG_PATH','C:\Users\Mario\dotfiles\')
 Copy-Item -Path "C:\Users\Mario\dotfiles\nvim" -Destination "C:\Users\Mario\AppData\Local" -recurse -Force
 ```
 
