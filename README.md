@@ -51,7 +51,7 @@ Corre nvim checkhealth revisa el folder de inicio
 
 Copia a este folder nvim  ejemplo:
 ```
-Copy-Item -Path "C:\Users\Mario\dotfiles\nvim" -Destination "C:\Users\Mario\AppData\" -recurse -Force
+Copy-Item -Path "C:\Users\Mario\dotfiles\nvim" -Destination "C:\Users\Mario\AppData\Local" -recurse -Force
 ```
 
 
