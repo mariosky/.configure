@@ -46,9 +46,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ## Windows
 
 Instala nvim con choco install nvim
-Corre nvim checkhealth revisa el folder de inicio
-Copia a este folder nvim 
 
+Corre nvim checkhealth revisa el folder de inicio
+
+Copia a este folder nvim  ejemplo:
+```
+Copy-Item -Path "C:\Users\Mario\dotfiles\nvim" -Destination "C:\Users\Mario\AppData\" -recurse -Force
+```
 
 
 
