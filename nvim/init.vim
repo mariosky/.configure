@@ -7,9 +7,8 @@ require('user.options')
 EOF
 
 " GENERAL
-"source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/spelling.vim
-source $HOME/.config/nvim/vim-plug/plugins.vim
+source ./general/spelling.vim
+source ./vim-plug/plugins.vim
 
 
 
@@ -27,7 +26,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 require("nvim-lsp-installer").setup {}
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
 local servers = {'pylsp','emmet_ls', 'texlab'}
 -- npm install -g @tailwindcss/language-server 
@@ -99,31 +98,24 @@ local cmp = require'cmp'
 EOF
 
 
-" OmniSharp
-
-"source $HOME/.config/nvim/plug-config/omnisharp.vim
-
-" Conquer of Completition
-"source $HOME/.config/nvim/plug-config/coc.vim
-" LaTeX
-source $HOME/.config/nvim/plug-config/vimtex.vim
+source ./plug-config/vimtex.vim
+source ./plug-config/vim-surruound.vim
 
 "Surrouound 
-source $HOME/.config/nvim/plug-config/vim-surruound.vim
+source ./plug-config/vim-surruound.vim
 
 
 "" MAPPINGS
-source $HOME/.config/nvim/plug-config/which-key.vim
-source $HOME/.config/nvim/general/mappings.vim
+source ./plug-config/which-key.vim
+source ./general/mappings.vim
 
 " Archivos
-source $HOME/.config/nvim/plug-config/nerdtree.vim
+source ./plug-config/nerdtree.vim
 
 " APPEARANCE
-" source $HOME/.config/nvim/themes/nord.vim
-source $HOME/.config/nvim/themes/onedark.vim
-source $HOME/.config/nvim/themes/airline.vim
-" let g:deoplete#enable_at_startup = 1
+source ./themes/airline.vim
+source ./themes/onedark.vim
+source ./themes/airline.vim
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let ayucolor="light"
