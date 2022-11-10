@@ -1,5 +1,7 @@
 
 
+"let g:python3_host_prog = '/path/to/python3'
+
 
 lua <<EOF
 --print('lua')
@@ -7,8 +9,37 @@ require('user.options')
 EOF
 
 " GENERAL
-source ./general/spelling.vim
-source ./vim-plug/plugins.vim
+
+let config_dir = '' 
+
+if has('win64')
+  let config_dir = $LOCALAPPDATA . '\nvim' 
+else
+  let config_dir = '~/.config/nvim' 
+endif
+
+echo config_dir
+exec 'source ' . config_dir . '/general/spelling.vim'
+exec 'source ' . config_dir . '/vim-plug/plugins.vim'
+
+exec 'source ' . config_dir . '/plug-config/vimtex.vim'
+exec 'source ' . config_dir . '/plug-config/vim-surruound.vim'
+
+"Surrouound 
+exec 'source ' . config_dir . '/plug-config/vim-surruound.vim'
+
+
+"" MAPPINGS
+exec 'source ' . config_dir . '/plug-config/which-key.vim'
+exec 'source ' . config_dir . '/general/mappings.vim'
+
+" Archivos
+exec 'source ' . config_dir . '/plug-config/nerdtree.vim'
+
+" APPEARANCE
+exec 'source ' . config_dir . '/themes/airline.vim'
+exec 'source ' . config_dir . '/themes/onedark.vim'
+exec 'source ' . config_dir . '/themes/airline.vim'
 
 
 
@@ -98,28 +129,9 @@ local cmp = require'cmp'
 EOF
 
 
-source ./plug-config/vimtex.vim
-source ./plug-config/vim-surruound.vim
-
-"Surrouound 
-source ./plug-config/vim-surruound.vim
-
-
-"" MAPPINGS
-source ./plug-config/which-key.vim
-source ./general/mappings.vim
-
-" Archivos
-source ./plug-config/nerdtree.vim
-
-" APPEARANCE
-source ./themes/airline.vim
-source ./themes/onedark.vim
-source ./themes/airline.vim
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 let ayucolor="light"
 syntax enable 
 
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 colorscheme tender 
 
