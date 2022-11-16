@@ -15,7 +15,7 @@ Archivos de configuración personales y otras tareas de instalación para nuevas
 2. Despues el gestor de plugins [vim-plug](https://github.com/junegunn/vim-plug). Abrimos nvim y ejecutamos :PlugInstall 
 3. Instalar [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 4. Instalar [sharkdp/fd](https://github.com/sharkdp/fd)
-5. Para LSP instalar node y nvm
+5. Para LSP instalar node y npm
 6. Opcional instalamos el Python provider:
 ```
 python3 -m pip install pynvim --user 
