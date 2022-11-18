@@ -50,6 +50,16 @@ require'nvim-tree'.setup {
 require("trouble").setup {
   }
 
+vim.keymap.set("n", "<leader>lb", "<cmd>TexlabBuild<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>lf", "<cmd>TexlabForward<cr>", {silent = true, noremap = true})
+
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", {silent = true, noremap = true})
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", {silent = true, noremap = true})
+
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -59,7 +69,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 require("nvim-lsp-installer").setup {}
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 --
-local servers = {'pylsp','emmet_ls', 'texlab'}
+local servers = {'pylsp','emmet_ls'}
 -- npm install -g @tailwindcss/language-server 
 local on_attach = function()
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
@@ -82,6 +92,22 @@ for _,lsp in pairs(servers) do
     on_attach = on_attach,
   }
 end
+
+-- texlab 
+local executable = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+local args = {"%l", "%p", "%f"}
+
+  require'lspconfig'['texlab'].setup({
+    setting = {
+        texlab = {
+            forwardSearch = {
+                executable = executable,
+                args = args,
+            },
+        },
+    },
+})
+
 -- OmniSharp
   require'lspconfig'['omnisharp'].setup{
     capabilities = capabilities, 
