@@ -54,7 +54,6 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
-
   use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
@@ -363,7 +362,11 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-
+  ltex = {
+  cmd = { "ltex-ls" },
+  filetypes = { "markdown", "text", "tex" },
+  flags = { debounce_text_changes = 300 },
+  },
   sumneko_lua = {
     Lua = {
       workspace = { checkThirdParty = false },
